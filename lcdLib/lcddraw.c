@@ -4,6 +4,8 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
+typedef unsigned char u_char;
+typedef unsigned int u_int;
 
 /** Draw single pixel at x,row 
  *

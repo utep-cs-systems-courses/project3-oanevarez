@@ -11,6 +11,10 @@
 #include "lcdutils.h"
 #include "msp430.h"
 
+typedef unsigned char u_char;
+typedef unsigned int u_int;
+
+
 u_char _orientation = 0;
 
 /** LCD pin definitions*/

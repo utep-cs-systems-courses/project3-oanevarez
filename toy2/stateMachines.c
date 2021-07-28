@@ -3,7 +3,10 @@
 #include "led.h"
 #include "switches.h"
 #include "buzzer.h"
+#include "../lcdLib/lcddraw.h"
+#include "../lcdLib/lcdutils.h"
 
+static u_int fontFgColor = COLOR_GREEN;
 void turn_red() //button s1 turns on red led, and makes buzz noise
 {
     red_on=1;
@@ -32,8 +35,12 @@ void turn_redOff(){
 
 
 void sound_on(){
+
+  clearScreen(COLOR_BLUE);
+  
   if(switch_state_down_1){
     interrupt =0;
+    drawString5x7(drawPos[0], drawPos[1], "TOY2", COLOR_RED, COLOR_WHITE);
     buzzer_set_period(2109);
     turn_red();
 

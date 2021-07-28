@@ -5,6 +5,9 @@
 #ifndef lcddraw_included
 #define lcddraw_included
 
+typedef unsigned char u_char;
+typedef unsigned int u_int;
+
 /** Draw single pixel at col, row 
  *
  *  \param col Column to draw to
