@@ -36,10 +36,9 @@ void turn_redOff(){
 
 void sound_on(){
 
-  
   if(switch_state_down_1){
     interrupt =0;
-    drawString5x7(drawPos[0], drawPos[1], "TOY2", COLOR_GREEN, COLOR_WHITE);
+    //drawString5x7(drawPos[0], drawPos[1], "TOY2", COLOR_GREEN, COLOR_WHITE);
     buzzer_set_period(2109);
     turn_red();
 
