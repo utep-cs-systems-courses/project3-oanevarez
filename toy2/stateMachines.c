@@ -6,7 +6,7 @@
 #include "../lcdLib/lcddraw.h"
 #include "../lcdLib/lcdutils.h"
 
-static u_int fontFgColor = COLOR_GREEN;
+//static u_int fontFgColor = COLOR_GREEN;
 void turn_red() //button s1 turns on red led, and makes buzz noise
 {
     red_on=1;
