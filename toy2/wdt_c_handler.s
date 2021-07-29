@@ -44,7 +44,7 @@ end:
   	pop r0 ; return 
   
   
-  	.data
+  	
 updateSec:
   	add 1, &secCount
   
