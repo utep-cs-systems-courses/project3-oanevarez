@@ -46,7 +46,7 @@ end:
   
   	.data
 updateSec:
-  	add 31, &secCount
+  	add 1, &secCount
   
 default:
   	mov #1, &state
