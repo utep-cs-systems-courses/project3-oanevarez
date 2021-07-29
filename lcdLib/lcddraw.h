@@ -8,6 +8,13 @@
 typedef unsigned char u_char;
 typedef unsigned int u_int;
 
+
+void a_shape();
+void move_up(u_char y);
+void move_down(u_char y);
+void move_left(u_char x);
+void move_right(u_char x);
+
 /** Draw single pixel at col, row 
  *
  *  \param col Column to draw to

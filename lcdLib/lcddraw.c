@@ -7,6 +7,34 @@
 typedef unsigned char u_char;
 typedef unsigned int u_int;
 
+u_char x_axis=10;
+u_char y_axis=10;
+
+void a_shape(u_int colorBGR){
+  fillRectangle(x_axis, y_axis, 30,20, colorBGR);
+}
+
+void move_up(u_char y){
+  a_shape(COLOR_BLUE);
+  y_axis +=y;
+}
+
+void move_down(u_char y){
+  a_shape(COLOR_RED);
+  y_axis -=y;
+}
+
+void move_left(u_char x){
+  a_shape(COLOR_WHITE);
+  x_axis -=x;
+}
+
+void move_right(u_char x){
+  a_shape(COLOR_YELLOW);
+  x_axis +=x;
+}
+
+
 /** Draw single pixel at x,row 
  *
  *  \param col Column to draw to
