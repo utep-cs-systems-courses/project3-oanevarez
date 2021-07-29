@@ -20,7 +20,7 @@ void wdt_c_handler()
 {
   static int secCount = 0;
   secCount ++;
-  if (secCount == 50) {
+  if (secCount == 76) {
     secCount = 0;
     switch(state){
     case 1: move_up(3); state++; break;
@@ -38,10 +38,11 @@ int main(void) {
 
   configureClocks();		/* setup master oscillator, CPU & peripheral clocks */
   //led_init(); 
-  //switch_init();
-  //buzzer_init();
-  //buzzer_set_period(0);
-
+  switch_init();
+  buzzer_init();
+  buzzer_set_period(0);
+  lcd_init();
+  
   enableWDTInterrupts();
   or_sr(0x8);
 
@@ -49,7 +50,6 @@ int main(void) {
   P1OUT |= LED;
   
   //drawing 
-  lcd_init();
   clearScreen(COLOR_GREEN);
   while(1){
     if(redrawScreen){
@@ -61,19 +61,9 @@ int main(void) {
       or_sr(8);
     }
     //and_sr(~8); //disable interupt GIE off
-    //clearScreen(COLOR_WHITE);
     
-    //for(char i=0; i<2; i++){
-      //drawPos[i] = controlPos[i];
-      //}
-    //or_sr(8); //enable interrupt
-    //drawString5x7(drawPos[0], drawPos[1], "cee yaa", COLOR_BLUE, COLOR_GREEN);
-    //or_sr(8);
-    P1OUT &= ~LED;
-    or_sr(10);
+    P1OUT &= ~LED;//tur led off
+    or_sr(0x10);//cpu off
     P1OUT |= LED;
   }
-  //P1OUT &= ~LED;
-  //or_sr(0x10); /* CPU off */
-  //P1OUT |= LED;
 }
