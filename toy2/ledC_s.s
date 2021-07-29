@@ -38,10 +38,11 @@ led_update:
 	jnz out
 	mov &redVal, r12
 	mov &greenVal, r13
-	bis ledFlags, 0(r12)
-	bis ledFlags, 0(r13)
+	bis 0(r12), ledFlags
+	bis 0(r13), ledFLags
 	xor #0xff, LEDS
-	and ledFlags, P1OUT
+	or LEDS, r14
+	and r14, P1OUT
 	bis ledFLags, P1OUT
 	mov #0, led_changed
 	
