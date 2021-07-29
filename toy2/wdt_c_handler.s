@@ -41,7 +41,7 @@ case_4:
 	jmp end
 
 end:
-  	ret ;pop r0
+  	ret 
   
   
   	
