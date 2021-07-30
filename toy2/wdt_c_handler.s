@@ -1,5 +1,4 @@
 	.data
-
 state:
 	.byte 1
 sec_count:
