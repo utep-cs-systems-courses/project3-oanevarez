@@ -11,8 +11,6 @@
 
 short drawPos[2] = {10,10}, controlPos[2] = {10,10};
 short redrawScreen =1;
-//u_int fontFgColor = COLOR_WHITE;
-//short velocity[2]={3,8}, limits[2] = {screenWidth-35, screenHeight-8};
 
 
 char state=1;
